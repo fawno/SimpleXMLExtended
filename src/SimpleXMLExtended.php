@@ -17,6 +17,24 @@
 			return $child;
 		}
 
+		public function parentNode () :? SimpleXMLExtended {
+			return simplexml_import_dom(dom_import_simplexml($this)->parentNode, SimpleXMLExtended::class);
+		}
+
+		public function removeNode () :? SimpleXMLExtended {
+			return $this->parentNode()->removeChild($this);
+		}
+
+		public function removeChild (SimpleXMLExtended $oldnode) :? SimpleXMLExtended {
+			try {
+				$removed = dom_import_simplexml($this)->removeChild(dom_import_simplexml($oldnode));
+			} catch (\Exception | \DOMException $e) {
+				return null;
+			}
+
+			return $oldnode;
+		}
+
 		public function formatXML (string $filename = null) {
 			$xmlDocument = new \DOMDocument('1.0');
 			$xmlDocument->preserveWhiteSpace = false;
