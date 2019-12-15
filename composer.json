@@ -1,0 +1,27 @@
+{
+  "name": "fawno/simple-xml-extended",
+  "version": "1.0.0",
+  "description": "SimpleXMLElement Extended class",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fawno",
+      "homepage": "https://github.com/fawno/SimpleXMLExtended/graphs/contributors"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/fawno/SimpleXMLExtended/issues",
+    "source": "https://github.com/fawno/SimpleXMLExtended"
+  },
+  "require": {
+    "php": ">=5.6.0",
+    "ext-dom": "*",
+    "ext-simplexml": "*",
+    "ext-libxml": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fawno\\SimpleXMLExtended\\": "src"
+    }
+  }
+}
