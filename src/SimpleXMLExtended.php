@@ -58,6 +58,13 @@
 			return $oldnode;
 		}
 
+		public function asText (bool $strip_spaces = false) {
+			$text = strip_tags($this->asXML());
+			$text = $strip_spaces ? preg_replace('~\s+~', ' ', $text) : $text;
+
+			return (trim($text) ?: null);
+		}
+
 		public function formatXML (string $filename = null) {
 			$xmlDocument = new DOMDocument('1.0');
 			$xmlDocument->preserveWhiteSpace = false;
