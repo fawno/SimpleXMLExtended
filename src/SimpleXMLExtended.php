@@ -60,9 +60,9 @@
 
 		public function asText (bool $strip_spaces = false) {
 			$text = strip_tags($this->asXML());
-			$text = $strip_spaces ? preg_replace('~\s+~', ' ', $text) : $text;
+			$text = $strip_spaces ? trim(preg_replace('~\s+~', ' ', $text)) : $text;
 
-			return (trim($text) ?: null);
+			return ($text ?: null);
 		}
 
 		public function formatXML (string $filename = null) {
