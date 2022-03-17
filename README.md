@@ -3,6 +3,10 @@
 [![GitHub license](https://img.shields.io/github/license/fawno/SimpleXMLExtended)](https://github.com/fawno/SimpleXMLExtended/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/fawno/SimpleXMLExtended)](https://github.com/fawno/SimpleXMLExtended/releases)
 [![Packagist](https://img.shields.io/packagist/v/fawno/simple-xml-extended)](https://packagist.org/packages/fawno/simple-xml-extended)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/fawno/simple-xml-extended)](https://packagist.org/packages/fawno/simple-xml-extended/stats)
+[![GitHub issues](https://img.shields.io/github/issues/fawno/SimpleXMLExtended)](https://github.com/fawno/simple-xml-extended/issues)
+[![GitHub forks](https://img.shields.io/github/forks/fawno/SimpleXMLExtended)](https://github.com/fawno/simple-xml-extended/network)
+[![GitHub stars](https://img.shields.io/github/stars/fawno/SimpleXMLExtended)](https://github.com/fawno/simple-xml-extended/stargazers)
 [![PHP](https://img.shields.io/packagist/php-v/fawno/simple-xml-extended)](https://php.net)
 
  SimpleXMLElement Extended class
