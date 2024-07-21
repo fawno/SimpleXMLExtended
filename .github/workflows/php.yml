@@ -5,6 +5,9 @@ on: [push, pull_request]
 permissions:
   contents: read
 
+env:
+  COMPOSER_ROOT_VERSION: dev-main
+
 jobs:
   build:
 
@@ -12,6 +15,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: Validate composer.json and composer.lock
+      uses: php-actions/composer@v6
+      with:
+        command: validate --strict
 
     - name: Cache Composer packages
       id: composer-cache
@@ -26,11 +34,6 @@ jobs:
       uses: php-actions/composer@v6
       with:
         args: --prefer-dist --no-progress
-
-    - name: Validate composer.json and composer.lock
-      uses: php-actions/composer@v6
-      with:
-        command: validate --strict
 
     - name: Run test suite
       uses: php-actions/phpunit@v4
