@@ -1,27 +1,41 @@
 {
-  "name": "fawno/simple-xml-extended",
-  "version": "1.1.2",
-  "description": "SimpleXMLElement Extended class",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Fawno",
-      "homepage": "https://github.com/fawno/SimpleXMLExtended/graphs/contributors"
+    "name": "fawno/simple-xml-extended",
+    "version": "1.1.2",
+    "description": "SimpleXMLElement Extended class",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fawno",
+            "homepage": "https://github.com/fawno/SimpleXMLExtended/graphs/contributors"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/fawno/SimpleXMLExtended/issues",
+        "source": "https://github.com/fawno/SimpleXMLExtended"
+    },
+    "require": {
+        "php": ">=8.2.0",
+        "ext-dom": "*",
+        "ext-simplexml": "*",
+        "ext-libxml": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fawno\\SimpleXMLExtended\\": "src"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable"
+    },
+    "autoload-dev": {
+        "psr-4": {
+                "Fawno\\SimpleXMLExtended\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+            "test": "phpunit"
+    },
+    "scripts-descriptions": {
+            "test": "Run PHPUnit tests"
     }
-  ],
-  "support": {
-    "issues": "https://github.com/fawno/SimpleXMLExtended/issues",
-    "source": "https://github.com/fawno/SimpleXMLExtended"
-  },
-  "require": {
-    "php": ">=7.0.0",
-    "ext-dom": "*",
-    "ext-simplexml": "*",
-    "ext-libxml": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "Fawno\\SimpleXMLExtended\\": "src"
-    }
-  }
 }
