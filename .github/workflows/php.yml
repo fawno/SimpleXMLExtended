@@ -15,7 +15,9 @@ jobs:
     - uses: php-actions/composer@v6
 
     - name: Validate composer.json and composer.lock
-      run: composer validate --strict
+      uses: php-actions/composer@v6
+      with:
+        command: validate --strict
 
     - name: Cache Composer packages
       id: composer-cache
@@ -25,11 +27,6 @@ jobs:
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
-
-    - name: Install dependencies
-      uses: php-actions/composer@v6
-      with:
-        command: install --prefer-dist --no-progress
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
