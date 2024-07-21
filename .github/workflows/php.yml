@@ -38,4 +38,4 @@ jobs:
     - name: Run test suite
       uses: php-actions/phpunit@v4
       with:
-        version: latest
+        test_suffix: .php
