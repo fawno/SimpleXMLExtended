@@ -36,6 +36,4 @@ jobs:
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
     - name: Run test suite
-      uses: php-actions/composer@v6
-      with:
-        command: run-script test
+      uses: php-actions/phpunit@v3
