@@ -36,7 +36,4 @@ jobs:
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
     - name: Run test suite
-      uses: php-actions/phpunit@v3
-      with:
-        test_suffix: .php
-        args: --test-suffix .phpt
+      uses: php-actions/phpunit@v4
