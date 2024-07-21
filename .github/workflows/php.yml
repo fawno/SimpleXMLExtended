@@ -6,7 +6,7 @@ permissions:
   contents: read
 
 env:
-  COMPOSER_ROOT_VERSION: dev-main
+  COMPOSER_ROOT_VERSION: ${{ github.ref }}
 
 jobs:
   build:
