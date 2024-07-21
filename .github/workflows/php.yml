@@ -39,3 +39,4 @@ jobs:
       uses: php-actions/phpunit@v3
       with:
         test_suffix: .php
+        args: --test-suffix .phpt
